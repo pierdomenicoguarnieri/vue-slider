@@ -4,26 +4,11 @@ createApp({
   data(){
     return{
       images: [
-        {
-          src: "assets/img/01.webp",
-          flag: true
-        },
-        {
-          src: "assets/img/02.webp",
-          flag: false
-        },
-        {
-          src: "assets/img/03.webp",
-          flag: false
-        },
-        {
-          src: "assets/img/04.webp",
-          flag: false
-        },
-        {
-          src: "assets/img/05.webp",
-          flag: false
-        }
+        "assets/img/01.webp",
+        "assets/img/02.webp",
+        "assets/img/03.webp",
+        "assets/img/04.webp",
+        "assets/img/05.webp",
       ],
       active: "active",
       counter: 0,

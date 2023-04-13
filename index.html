@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.min.js' integrity='sha512-DJ2+sosWB5FnZAIeCWAHu2gxQ7Gi438oOZLcBQSOrW8gD0s7LIXDv/5RW76B3FcljF40BXnfqNIo6Dhp7dFHJg==' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Image Carousel</title>
   </head>
   <body>
-    
-    <div class="pg-carousel-container">
-      <div class="pg-carousel">
-        <div class="carouselBtn prev">&uparrow;</div>
-        <div class="pg-img-container">
+    <div id="app">
+      <div class="pg-carousel-container">
+        <div class="pg-carousel">
+          <div class="carouselBtn prev">&uparrow;</div>
+          <div class="pg-img-container">
+            <img :src="images[counter]" class="imgCarousel">
+          </div>
+          <div class="pg-img-preview">
+            <img v-for="image in images" :src="image" class="imgPreview" alt="">
+          </div>
+          <div class="carouselBtn next">&downarrow;</div>
         </div>
-        <div class="pg-img-preview">
-        </div>
-        <div class="carouselBtn next">&downarrow;</div>
       </div>
-      
     </div>
+    
 
     <script src="assets/js/script.js"></script>
   </body>

@@ -29,64 +29,19 @@ createApp({
     showImg(index){
       console.log(index)
       this.counter = index
-    }
-  }
-}).mount("#app")
-
-// for(let i = 0; i < images.length; i++){
-//   let image = images[i];
-//   imgContainer.innerHTML +=`
-//   <img src="${image}" class="imgCarousel" alt="">
-//   `
-//   imgContainerPreview.innerHTML +=`
-//   <img src="${image}" class="imgPreview" alt="">
-//   `
-// }
+    },
+    
+    autoScroll(){
+      this.interval = setInterval(() => {
+        this.changeImg(true)
+      }, 3000);
+    },
 
 // const imgCollection = document.querySelectorAll(".imgCarousel");
 
 // const imgPreviewCollection = document.querySelectorAll(".imgPreview");
 
-
-// imgCollection[0].classList.add("show");
-
-// imgPreviewCollection[0].classList.add("active");
-
-// let i = 0;
-
-// for(let j = 1; j < imgCollection.length; j++){
-//   imgCollection[j].classList.add("scrolled");
-// }
-
-// btnNext.addEventListener("click", function(){
-
-//   if(i == (imgCollection.length) - 1){
-//     imgCollection[i].classList.remove("show");
-//     imgPreviewCollection[i].classList.remove("active");
-//     i = 0;
-//     imgCollection[i].classList.add("show");
-//     imgPreviewCollection[i].classList.add("active");
-//   }else{
-//     i++;
-//     imgCollection[i - 1].classList.remove("show");
-//     imgPreviewCollection[i - 1].classList.remove("active");
-//     imgCollection[i].classList.add("show");
-//     imgPreviewCollection[i].classList.add("active");
-//   }
-// })
-
-// btnPrev.addEventListener("click", function(){
-//   if(i == 0){
-//     imgCollection[i].classList.remove("show");
-//     imgPreviewCollection[i].classList.remove("active");
-//     i = (imgCollection.length) - 1;
-//     imgCollection[i].classList.add("show");
-//     imgPreviewCollection[i].classList.add("active");
-//   }else{
-//     i--;
-//     imgCollection[i + 1].classList.remove("show");
-//     imgPreviewCollection[i + 1].classList.remove("active");
-//     imgCollection[i].classList.add("show");
-//     imgPreviewCollection[i].classList.add("active");
-//   }
-// })
+  mounted(){
+    this.autoScroll()
+  }
+}).mount("#app")

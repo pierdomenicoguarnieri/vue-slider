@@ -25,16 +25,39 @@ createApp({
           flag: false
         }
       ],
+      active: "active",
       counter: 0,
       imgContainer: document.querySelector(".pg-img-container"),
       imgContainerPreview: document.querySelector(".pg-img-preview"),
     }
+  },    
+  
+  methods: {
+    nextImg(){
+      if(this.counter == (this.images.length) - 1){
+        this.counter = 0;
+        this.images[this.counter].flag = true;
+        this.images[(this.images.length) -1].flag = false;
+      }else{
+        this.counter++;
+        this.images[this.counter].flag = true;
+        this.images[this.counter - 1].flag = false;
+      }
+    },
+
+    prevImg(){
+      if(this.counter == 0){
+        this.images[this.counter].flag = false;
+        this.counter = (this.images.length) - 1;
+        this.images[this.counter].flag = true;
+      }else{
+        this.counter--;
+        this.images[this.counter].flag = true;
+        this.images[this.counter + 1].flag = false;
+      }
+    }
   }
 }).mount("#app")
-
-const btnNext = document.querySelector(".next");
-
-const btnPrev = document.querySelector(".prev");
 
 // for(let i = 0; i < images.length; i++){
 //   let image = images[i];

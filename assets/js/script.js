@@ -18,15 +18,11 @@ createApp({
   },    
   
   methods: {
-    nextImg(){
-      if(this.counter == (this.images.length) - 1){
-        this.counter = 0;
-        this.images[this.counter].flag = true;
-        this.images[(this.images.length) -1].flag = false;
+    changeImg(flag){
+      if(flag){
+        (this.counter == (this.images.length) - 1) ? this.counter = 0 : this.counter++;
       }else{
-        this.counter++;
-        this.images[this.counter].flag = true;
-        this.images[this.counter - 1].flag = false;
+        (this.counter == 0) ? this.counter = (this.images.length) - 1 : this.counter--;
       }
     },
 

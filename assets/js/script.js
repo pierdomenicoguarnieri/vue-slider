@@ -4,11 +4,26 @@ createApp({
   data(){
     return{
       images: [
-        "assets/img/01.webp",
-        "assets/img/02.webp",
-        "assets/img/03.webp",
-        "assets/img/04.webp",
-        "assets/img/05.webp"
+        {
+          src: "assets/img/01.webp",
+          flag: true
+        },
+        {
+          src: "assets/img/02.webp",
+          flag: false
+        },
+        {
+          src: "assets/img/03.webp",
+          flag: false
+        },
+        {
+          src: "assets/img/04.webp",
+          flag: false
+        },
+        {
+          src: "assets/img/05.webp",
+          flag: false
+        }
       ],
       counter: 0,
       imgContainer: document.querySelector(".pg-img-container"),

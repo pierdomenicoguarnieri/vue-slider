@@ -14,6 +14,24 @@ Bonus:
 
 ## Steps
 
+**Steps:**
+
 1. Inizializzare Vue
 
-2. 
+2. Porto l'array delle immagini nel return di data()
+
+3. Stampo dinamicamente le immagini e le thumb:
+
+  - Le immagini vengono stampate all'aumentare del counter
+
+  - Le thumb vengono stampate con un v-for
+
+**Steps Bonus:**
+
+1. Creo una funzione che mi cambi l'immagine mostrata al click del bottone next o prev
+
+2. All'interno del v-for che mi stampa le thumb salvo in una variabile l'index della singola thumb, ed al click di quest'ultima la mostro in pagina cambiando contemporaneamente la classe active
+
+3. Creare una funzione che gestisca l'autoplay utilizzando un setInterval
+
+4. Aggiungo @mouseover e @mouseleave per gestire lo stop ed il play dell'autolay del carosello

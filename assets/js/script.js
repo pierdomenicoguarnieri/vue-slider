@@ -26,16 +26,9 @@ createApp({
       }
     },
 
-    prevImg(){
-      if(this.counter == 0){
-        this.images[this.counter].flag = false;
-        this.counter = (this.images.length) - 1;
-        this.images[this.counter].flag = true;
-      }else{
-        this.counter--;
-        this.images[this.counter].flag = true;
-        this.images[this.counter + 1].flag = false;
-      }
+    showImg(index){
+      console.log(index)
+      this.counter = index
     }
   }
 }).mount("#app")

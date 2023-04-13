@@ -12,8 +12,7 @@ createApp({
       ],
       active: "active",
       counter: 0,
-      imgContainer: document.querySelector(".pg-img-container"),
-      imgContainerPreview: document.querySelector(".pg-img-preview"),
+      interval: null,
     }
   },    
   
@@ -37,9 +36,14 @@ createApp({
       }, 3000);
     },
 
-// const imgCollection = document.querySelectorAll(".imgCarousel");
+    mouseOver(){
+      clearInterval(this.interval)
+    },
 
-// const imgPreviewCollection = document.querySelectorAll(".imgPreview");
+    mouseLeave(){
+      this.autoScroll()
+    }
+  },
 
   mounted(){
     this.autoScroll()

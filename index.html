@@ -12,14 +12,14 @@
     <div id="app">
       <div class="pg-carousel-container">
         <div class="pg-carousel">
-          <div class="carouselBtn prev" @click="changeImg(false)">&uparrow;</div>
+          <div class="carouselBtn prev" @click="changeImg(false)" @mouseover="mouseOver" @mouseleave="mouseLeave">&uparrow;</div>
           <div class="pg-img-container" @mouseover="mouseOver" @mouseleave="mouseLeave">
             <img :src="images[counter]" class="imgCarousel">
           </div>
           <div class="pg-img-preview" @mouseover="mouseOver" @mouseleave="mouseLeave">
             <img v-for="(image, index) in images" :class="(counter === index) ? 'active' :'none'" :src="image" class="imgPreview" @click="counter = index" alt="">
           </div>
-          <div class="carouselBtn next" @click="changeImg(true)">&downarrow;</div>
+          <div class="carouselBtn next" @click="changeImg(true)" @mouseover="mouseOver" @mouseleave="mouseLeave">&downarrow;</div>
         </div>
       </div>
     </div>

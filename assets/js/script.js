@@ -10,7 +10,6 @@ createApp({
         "assets/img/04.webp",
         "assets/img/05.webp",
       ],
-      active: "active",
       counter: 0,
       interval: null,
     }

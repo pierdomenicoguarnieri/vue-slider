@@ -23,11 +23,6 @@ createApp({
         (this.counter == 0) ? this.counter = (this.images.length) - 1 : this.counter--;
       }
     },
-
-    showImg(index){
-      console.log(index)
-      this.counter = index
-    },
     
     autoScroll(){
       this.interval = setInterval(() => {
